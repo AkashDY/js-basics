@@ -42,6 +42,23 @@
                     localStorage.removeItem(obj.email);
                     parentEl.removeChild(childEl);
                 }
+                
+                // edit button // -------
+                let editBtn = document.createElement('input');
+                editBtn.type = 'button';
+                editBtn.value = 'Edit';
+                childEl.appendChild(editBtn);
+                // parentEl.appendChild(childEl);
+
+                editBtn.onclick = () => {
+                    localStorage.removeItem(obj.email);
+                    parentEl.appendChild(childEl);
+                    document.getElementById('userNameTag').value = obj.name
+                    document.getElementById('emailTag').value = obj.email
+                    document.getElementById('phonenumberTag').value = obj.phonenumber
+
+
+                }
             }
         </script>
     </body>
