@@ -62,8 +62,15 @@ function onSubmit(e) {
 
         //- ADDING VALUES IN THE LOCAL STORAGE ////////
 
-        localStorage.setItem('userName', nameInput.value);
-        localStorage.setItem('userId', emailInput.value);
+//         localStorage.setItem('userName', nameInput.value);
+//         localStorage.setItem('userId', emailInput.value);
+        let userDetail = {
+            name : nameInput.value,
+            userId : emailInput.value
+        }
+
+        let new_obj = JSON.stringify(userDetail);
+        localStorage.setItem('userDetail', new_obj);
         
         //------------------------------------------------//
 
