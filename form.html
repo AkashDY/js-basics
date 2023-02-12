@@ -31,6 +31,17 @@
             //     let childEl = document.createElement('li')
             //     childEl.textContent = obj.name + ' - ' + obj.email + ' - ' + obj.phonenumber
             //     parentEl.appendChild(childEl)
+                // delete button // ---------
+                let delBtn = document.createElement('input');
+                delBtn.type = 'button';
+                delBtn.value = 'Delete';
+                childEl.appendChild(delBtn);
+                parentEl.appendChild(childEl);
+
+                delBtn.onclick = () => {
+                    localStorage.removeItem(obj.email);
+                    parentEl.removeChild(childEl);
+                }
             }
         </script>
     </body>
